@@ -1,0 +1,78 @@
+<div>
+                                      {values.Payments.length > 0 &&
+                                        values.Payments.map((elem, index) => (
+                                          <div className="row" key={index}>
+                                           
+                                            <Select
+                                              name={`Payments.obj.${index}.month`}
+                                              placeholder="Enter Course Name"
+                                              type="text"
+                                              onChange={handleChange}
+                                            >
+                                              <MenuItem value="select" selected>
+                                                <em>Select Month</em>
+                                              </MenuItem>
+                                              <MenuItem value="January">
+                                                January
+                                              </MenuItem>
+                                              <MenuItem value="feburary">
+                                                feburary
+                                              </MenuItem>
+                                              <MenuItem value="March">
+                                                March
+                                              </MenuItem>
+                                              <MenuItem value="Aprail">
+                                                Aprail
+                                              </MenuItem>
+                                              <MenuItem value="May">
+                                                May
+                                              </MenuItem>
+                                              <MenuItem value="June">
+                                                June
+                                              </MenuItem>
+                                              <MenuItem value="July">
+                                                July
+                                              </MenuItem>
+                                              <MenuItem value="August">
+                                                August
+                                              </MenuItem>
+                                              <MenuItem value="September">
+                                                September
+                                              </MenuItem>
+                                              <MenuItem value="Octuber">
+                                                Octuber
+                                              </MenuItem>
+                                              <MenuItem value="November">
+                                                November
+                                              </MenuItem>
+                                              <MenuItem value="December">
+                                                December
+                                              </MenuItem>
+                                            </Select>
+                                            <br />
+                                            <TextField
+                                              variant="standard"
+                                              name={`Payments.obj.${index}.fees`}
+                                              placeholder="Enter Fees"
+                                              label="Enter Fees"
+                                              type="text"
+                                              onChange={handleChange}
+                                            />
+                                            <button
+                                              type="button"
+                                              onClick={() => remove(index)}
+                                            >
+                                              remove
+                                            </button>
+                                          </div>
+                                        ))}
+                                      <Button
+                                        variant="contained"
+                                        type="button"
+                                        onClick={() =>
+                                          push({ months: "", fees: "" })
+                                        }
+                                      >
+                                        Add
+                                      </Button>
+                                    </div>

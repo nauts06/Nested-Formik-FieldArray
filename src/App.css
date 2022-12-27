@@ -1,0 +1,10 @@
+#set{
+  margin-left: 23%;
+  
+}
+#border{
+  border: solid 2px grey;
+  width: 600px;
+  height: auto;
+  overflow: scroll;
+}
